@@ -1,0 +1,27 @@
+float jordRadius = 950;
+PVector jord = new PVector(300,950);
+float andenRadius = 25;
+
+void setup(){
+ size(600,600);
+}
+
+
+void draw (){
+   clear();
+   background(255);
+   checkCollision();
+   circle(jord.x,jord.y,jordRadius);
+   ellipse (mouseX,mouseY, andenRadius,andenRadius);
+}
+
+void checkCollision(){
+  if(dist(mouseX,mouseY,jord.x,jord.y)< andenRadius/2 + jordRadius/2 ){
+   fill(125);
+  }
+  else{
+   fill(255); 
+}
+  
+  
+}
